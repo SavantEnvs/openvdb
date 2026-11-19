@@ -1,0 +1,10 @@
+project: savantenvs/openvdb
+target: fuzz_vdb_file
+
+cmds:
+  - cmd: /mayhem/fuzz_vdb_file
+    libfuzzer: true
+    timeout: 10
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_vdb_file/testsuite

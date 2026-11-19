@@ -1,0 +1,10 @@
+project: savantenvs/openvdb
+target: fuzz_nanovdb_metadata
+
+cmds:
+  - cmd: /mayhem/fuzz_nanovdb_metadata
+    libfuzzer: true
+    timeout: 10
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_nanovdb_metadata/testsuite
